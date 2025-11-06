@@ -2,7 +2,6 @@
 A simple quiz game project made using C++
 
 Code
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -19,10 +18,10 @@ int askQuestion(string question, string a, string b, string c, string d, char co
     cin >> answer;
 
     if (tolower(answer) == tolower(correctOption)) {
-        cout << " Correct!" << endl;
+        cout << "✅ Correct!" << endl;
         return 1; // return 1 for correct answer
     } else {
-        cout << "Wrong! Correct answer is option " << correctOption << "." << endl;
+        cout << "❌ Wrong! Correct answer is option " << correctOption << "." << endl;
         return 0;
     }
 }
@@ -32,7 +31,7 @@ int main() {
     string playerName;
 
     cout << "------------------------------------\n";
-    cout << "       QUIZ GAME IN C++         \n";
+    cout << "      🧠 QUIZ GAME IN C++ 🎮        \n";
     cout << "------------------------------------\n";
     cout << "Enter your name: ";
     getline(cin, playerName);
@@ -58,17 +57,18 @@ int main() {
 
     // Show results
     cout << "\n------------------------------------\n";
-    cout << " Quiz Completed!\n";
+    cout << "🎯 Quiz Completed!\n";
     cout << "Player: " << playerName << endl;
     cout << "Your total score: " << score << " out of 5\n";
 
     if (score == 5)
-        cout << " Excellent! You're a C++ Master!\n";
+        cout << "🏆 Excellent! You're a C++ Master!\n";
     else if (score >= 3)
         cout << "👍 Good job! Keep learning.\n";
     else
-        cout << " You need more practice. Try again!\n";
+        cout << "📘 You need more practice. Try again!\n";
 
     cout << "------------------------------------\n";
     return 0;
 }
+
